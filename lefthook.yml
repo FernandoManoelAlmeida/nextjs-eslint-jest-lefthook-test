@@ -42,7 +42,7 @@ pre-commit:
         if
           git diff --cached --name-only | grep -q ./;
         then
-          yarn format && yarn test;
+          yarn format && yarn test:ci;
         else
           echo "\n  ✅ No file has changed! 🚀";
         fi
@@ -55,7 +55,7 @@ pre-push:
         if
           git diff-tree --no-commit-id --name-only -r HEAD..origin/master | grep -q ./;
         then
-          yarn lint && yarn coverage;
+          yarn coverage;
         else
           echo "\n  ✅ No file has changed! 🚀"
         fi

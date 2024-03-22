@@ -6,6 +6,7 @@
     "start": "next start",
     "test": "jest --watchAll",
     "test:ci": "jest --ci",
+    "coverage": "jest --collect-coverage",
     "format": "yarn prettier ./src --write && next lint ./src --fix --ext js,ts,tsx"
   },
   "dependencies": {
